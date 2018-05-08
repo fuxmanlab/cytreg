@@ -12,7 +12,7 @@ This repository contains the python scripts used to retrieve PubMed articles con
 ## Usage
 
 1)  nih_eutils_tf_pmid\
-    python nih_eutils_tf_pmid.py tf_names.txt cyt_names.txt output_directory\
+ python nih_eutils_tf_pmid.py tf_names.txt cyt_names.txt output_directory\
   
 2)  post_process_pmids.py\
-    python post_process_pmids.py -xml ../xml_directory -tf_list tf_names.txt cyt_names.txt -match xml -ofile output_file -a 
+ python post_process_pmids.py -xml ../xml_directory -tf_list tf_names.txt cyt_names.txt -match xml -ofile output_file -a 

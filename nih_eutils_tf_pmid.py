@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 22 12:04:58 2017
-
-@author: bgregor
-"""
  
  
 from bs4 import BeautifulSoup
@@ -230,11 +225,12 @@ class PmidQuery(object):
 
 
 if __name__=='__main__':
-    if len(sys.argv) != 3:
-        print 'Usage:  python nih_eutils_tf_pmid.py tf_filename output_dir eutils_email'
+    if len(sys.argv) != 4:
+        print 'Usage:  python nih_eutils_tf_pmid.py tf_filename cyt_filename output_dir'
         exit(1)
     tf_dict = read_tf_list(sys.argv[1])
-    output_dir = sys.argv[2]
+    cyts = read_tf_list(sys.argv[2])
+    output_dir = sys.argv[3]
     pmq = PmidQuery(tf_dict, cyts, assays,output_dir) 
     start = datetime.datetime.now()
     pmq.fetch_pmid_records()

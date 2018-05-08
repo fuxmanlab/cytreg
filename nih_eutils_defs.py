@@ -33,8 +33,6 @@ def read_tf_list(filename):
 # example:  'TGF-β'
 # Force cyts into a complete 8-bit UTF-8 encoding
 #cyts = convert_dict_to_utf8(cyts)
-cyt_file = '/projectnb/cytokine/pmid/cyt_alvaro.txt'
-cyts = read_tf_list(cyt_file)
 
 # assays
 # In order of most to least frequently found - speeds up matching in post_process_pmids.py

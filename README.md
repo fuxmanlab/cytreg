@@ -1,9 +1,9 @@
 # CytReg
-This repository contains the python scripts used to retrieve PubMed articles containing at least a combination of a TF, a cytokine, and an assay. Additionally has the cytokine and TF name lists used to query PubMed.
+This repository contains the python scripts used to retrieve PubMed articles containing at least one combination of a TF, a cytokine, and an assay. Additionally has the cytokine and TF name lists used to query PubMed.
 
 ## Description of Files
 - nih_eutils_defs.py\
-  holds definition of assays and function to create the TF and cytokine dictionaries
+  holds definitions of assays and functions to create the TF and cytokine dictionaries
 - nih_eutils_tf_pmid.py\
   downloads PubMed articles XLM files containing at least a TF, cytokine and assay
 - post_process_pmids.py\

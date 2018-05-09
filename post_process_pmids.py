@@ -204,14 +204,15 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Post-process PMID search into a CSV file.')
     parser.add_argument('-xml', help='Directory of XML files.', required=True)
     parser.add_argument('-tf_list', help='File of transcription factor names and aliases.', required=True)
+    parser.add_argument('-cyt_list', help='File of cytokine names and aliases.', required=True)
     parser.add_argument('-match', help='Field to match.', required=True,choices=['xml','abstract', 'title'])
     parser.add_argument('-ofile', help='Output filename.', required=True)
     parser.add_argument('-a', help='Use loose matching for assay names.', action='store_false')
 
     args = parser.parse_args()
-
     xml_directory = args.xml
     tf_dict = read_tf_list(args.tf_list)
+    cyts = read_tf_list(args.cyt_list)
     match_type = args.match
     output_filename = args.ofile
     strict_assay = args.a
